@@ -40,7 +40,7 @@ jobs:
           export ALLOW_MISSING_DEPENDENCIES=true
           export LC_ALL="C"
           export CROSS_COMPILE=/opt/toolchains/arm-eabi-4.8/bin/arm-eabi-
-          lunch omni_matissewifi-eng
+          lunch omni_matisse-eng
           make -j$(nproc --all) recoveryimage
           export PATH=$OLDPATH
           export JAVA_HOME=$OLDJAVAHOME
@@ -48,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: twrp
-          path: /home/runner/OFRP/out/target/product/matissewifi/recovery.*
+          path: /home/runner/OFRP/out/target/product/matisse/recovery.*
